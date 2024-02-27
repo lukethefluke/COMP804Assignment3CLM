@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<Html>
+<head>
+    <title>Assignment 3</title>
+    <style>       
+        :root {
+            --firstColor: #835af1;
+            --secondColor: #1f4e5f;
+            --thirdColor: #53a8b6;
+            --fourthColor: #79c2d0;
+            --fifthColor: #bbe4e9;
+            --sixthColor: #ffb6b9;
+            --seventhColor: #fae3d9;
+            }
+
+        a {
+            color: var(--sixthColor);
+        }
+
+        a:hover {
+            color: var(--firstColor);
+        }
+
+        table {
+            border: 3px inset var(--fourthColor);
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+        }    
+
+        table img {
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        tr th {
+            background-color: var(--firstColor);
+        }
+
+        th, td {
+            border: 1px solid var(--secondColor);
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        td {
+            color: var(--secondColor);
+        }
+
+        .heading {
+            color: var(--secondColor);
+            background-color: var(--sixthColor);
+            border: 3px dotted var(--secondColor);
+            border-radius: 5px;
+            box-shadow: rgba(187, 228, 233, 0.6) 10px 10px 10px;
+            padding: 0 10px
+        }
+
+        .even {
+            background-color: var(--fifthColor);
+            color: var(--secondColor);
+        }
+
+        .odd {
+            background-color: var(--thirdColor);
+            color: white;
+        }
+
+        .center {
+            text-align: center;
+
+        }
+
+        .generalImage {
+            width: 250px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .notSelected {
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+
+        .selected {
+            border: 2px solid blue;
+            border-radius: 3px;
+        }
+
+        #userActionedTextField {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 1: Use CSS to display the following information</h1>
+    <div class="heading">
+        <h2>8779764 Cameron Luke Marshall</h2>
+        <h2>COMP804: Web Security</h2>
+        <h2>Assigment 3, due 4 March 2024</h2>
+    </div>
+
+    <h1>Task 2: Use CSS to style a table</h1>
+
+    <table>
+        <tr class="tableHeader">
+            <th>Activity</th>
+            <th>Date</th>
+        </tr>
+        <tr class="odd">
+            <td>First day to enrol for re-enrolling (continuing students)</td>
+            <td>18 Nov 2024</td>
+        </tr>
+        <tr class="even">
+            <td>First day to enrol for new students (commencing students)</td>
+            <td>02 Dec 2024</td>
+        </tr>
+        <tr class="odd">
+            <td>Orientation</td>
+            <td>24 Feb - 27 Feb 2025
+                <br>
+                <br>
+                Further information is available on
+                <br>
+                <a href="https://www.uow.edu.au/student/get-started/">Get Started</a></td>
+        </tr>
+        <tr class="even">
+            <td>Lectures Commence (weeks 1-7)</td>
+            <td>03 Mar - 18 Apr 2025</td>
+        </tr>
+        <tr class="odd">
+            <td>Last day to enrol / add subjects yourself</td>
+            <td>14 Mar 2025</td>
+        </tr>
+        <tr class="even">
+            <td>Last day to enrol / add subjects with Head of Students approval</td>
+            <td>21 Mar 2025</td>
+        </tr>
+        <tr class="odd">
+            <td><strong>CENSUS DATE</strong>
+                <ul>
+                    <li>Fees due</li>
+                    <li>Last day to withdraw from subject/s without paying for them</li>
+                    <li>HECS / FEE HELP debt reporting date</li>
+                    <li>Last day to change HECS / FEE HELP billing option</li>
+                </ul>
+                <a href="https://uowedu.service-now.com/kb?id=kb_article_view&sysparm_article=KB0012659">Learn more about Census date&gt</a>
+            </td>
+            <td>31 Mar 2025</td>
+        </tr>
+        <tr class="even">
+            <td>Student Services and Amenities Fees Due</td>
+            <td>01 Apr 2025</td>
+        </tr>
+        <tr class="odd">
+            <td>Last day to withdraw without academic penalty - subject deleted from record
+
+                Fail grade recorded if subject withdrawn after this date</td>
+            <td>09 May 2025</td>
+        </tr>
+        <tr class="even">
+            <td>Mid-Session Recess (1 week)</td>
+            <td>21 Apr - 25 Apr 2025</td>
+        </tr>
+        <tr class="odd">
+            <td>Lectures Recommence (weeks 8-13)</td>
+            <td>28 Apr - 06 Jun 2025</td>
+        </tr>
+        <tr class="even">
+            <td>Study Recess (1 week)</td>
+            <td>09 Jun - 13 Jun 2025</td>
+        </tr>
+        <tr class="odd">
+            <td>Exams (2 weeks)</td>
+            <td>14 Jun - 26 Jun 2025</td>
+        </tr>
+        <tr class="even">
+            <td>Mid-Year Recess / End of session break (4 weeks)</td>
+            <td>30 Jun - 25 Jul 2025</td>
+        </tr>
+        <tr class="odd">
+            <td>Release of Results</td>
+            <td>10 Jul 2025</td>
+        </tr>
+        <tr class="even">
+            <td>Supplementary and deferred exam period</td>
+            <td>21 Jul - 25 Jul 2025</td>
+        </tr>
+    </table>
+
+    <h1>Task 3: HTML & CSS</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Web Attacks</th>
+        </tr>
+        <tr>
+            <td class="center">
+                <div>1. XSS: Cross-Site Scripting</div>
+                <br>
+                <br>
+                <img src="images/xxs.jpg" alt="Image of cross-site scripting attack.">
+                <br>
+                <br>
+                <div>
+                    Source: <a href="https://learning.mlytics.com/cyber-attacks/what-is-cross-site-scripting/">mlytics.com</a>
+                </div>
+            </td>
+            <td>
+                <div>Cross-site scripting occurs when a user is able to inject malicious scripting into the code of a website. The payload can be in any client-side language, but is usually in JavaScript.
+                    There are three types of XXS. Reference: <a href="https://www.synopsys.com/glossary/what-is-cross-site-scripting.html">synopsys.net</a>
+                    <ul>
+                        <li>In stored XSS, the attacker uploads it to a database which is then downloaded by users. Reference and example: <a href="https://portswigger.net/web-security/cross-site-scripting/stored">portswigger.net</a></li>
+                    <li>In reflected XSS, the user makes an unsafe HTTP request that contains the usafe code within the url parameters. Reference and example: <a href="https://portswigger.net/web-security/cross-site-scripting/reflected">portswigger.net</a></li>
+                    <li>The difference between Stored and Reflected XSS? In stored XSS the attack is self-contained within the application, and the attacker does not need to induce the user to make a request containing the exploit. Reference: <a href="https://portswigger.net/web-security/cross-site-scripting/stored">portswigger.net</a></li>
+                    <li>In DOM-based XSS, the user opens a URL with malicious script within the URL parameters (much like reflected XSS), but the attack results in the DOM being modified. Eg. the URL parameter is supposed to be displayed on the DOM, but instead a malicious script is inserted into that position, and then runs. It is a subset of Reflected XSS, as the code is client side only. References and examples: <a href="https://portswigger.net/web-security/cross-site-scripting/dom-based">portswigger.net</a> and <a href="https://owasp.org/www-community/attacks/DOM_Based_XSS">owasp.org</a> </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td  class="center">
+                <div>2. SQL Injection Attacks</div>
+                <br>
+                <br>
+                <img src="images/sql.jpg" alt="Syringe attacking database.">
+                <br>
+                <br>
+                <div>
+                    Source:  <a href="https://medium.com/@charithra/introduction-to-sql-injections-8c806537cf5d">medium.com</a>
+                </div>
+            </td>
+            <td>
+                <div>
+                    If the programmer does not create a separation between program code and user-provided input, then a user can inject malicious code into an application. 
+                    This is one of the most common types of attack. In this attack the user provides a SQL statement in an input that can then control the backend database server. 
+                    This will be in the form of a SQL statement and is independent of the backend server language or technology. When a user submits an input on a form, they can change the query structure by inserting particular characters, 
+                    so that the server assumes the input is done and the following is code that should be run. In this way the user can modify the backend database or extract information.
+                    eg. the user adds &#39;&#45;&#45; at the end of a query input. Any sanitising code after this is then interpreted as a comment and ignored.
+                    <ul>
+                        <li>Blind SQL Injection happens when the attacker does not receive a response straight back, but must access the results through other means.</li>
+                        <li>A second-order SQL injection happens when the the application takes user input and stores it for later use. A second HTTP request then is able to leverage that new vulnerability.</li>
+                    </ul>
+                    Reference and examples: <a href="https://portswigger.net/web-security/sql-injection">portswigger.net</a> and <a href="https://www.synopsys.com/glossary/what-is-sql-injection.html">synopsys.com</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="center">
+                <div>3. Broken Authentication</div>
+                <br>
+                <br>
+                <img src="images/brokenauth.JPG" alt="Syringe attacking database.">
+                <br>
+                <br>
+                <div>
+                    Source:  <a href="https://auth0.com/blog/what-is-broken-authentication/">auth0.com</a>
+                </div>
+            </td>
+            <td>
+                <div>
+                    This is caused by poorly implemented authentication and session management. 
+                    If an attacker is able to compromise, session tokens or keys, or passwords then they can assumer a user's identity.    
+                    Types:
+                    <ul>
+                        <li>Brute Force: Guessable login details</li>
+                        <li>URL Rewriting: URL contains session information, accessed through unsecured wifi connection &#40;eg. ID's&#41;</li>
+                        <li>Session Fixation: Session ID's reused</li>
+                        <li>Session Persistence: Session does not time out</li>
+                        <li>Credential Stuffing: Session information stored unencrypted</li>
+                        <li>Phishing attacks</li>
+                    </ul>
+                    Reference and examples: <a href="https://www.contrastsecurity.com/glossary/broken-authentication">contrastsecurity.com</a> and <a href="https://auth0.com/blog/what-is-broken-authentication/">auth0.com</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td  class="center">
+                <div>4. Drive By Download</div>
+                <br>
+                <br>
+                <img src="images/drive.jpg" alt="Attacker downloading software on to computer.">
+                <br>
+                <br>
+                <div>
+                    Source: <a href="https://norbert-pohlmann.com/glossar-cyber-sicherheit/drive-by-download/">norbert-pohlmann.com</a>
+                </div>
+            </td>
+            <td>
+                <div>
+                    Drive By Download is when a program is installed to your device without your consent.
+                    An unwanted download may be a non-malicious program such as adware, or malware.
+                    Drive By Download refers to the ladder, and involves malware.
+                    The malware may:
+                    <ul>
+                        <li>Hijack your device for a botnet, pivot attack, or further breach.</li>
+                        <li>Monitor your activity.</li>
+                        <li>Steal data from your device.</li>
+                        <li>Damage your device.</li>
+                    </ul>
+                    The attack may download a program onto your system by:
+                    <ul>
+                        <li>Convince you to download the software willingly.</li>
+                        <li>Use a deceptive link or as part of legitimate software.</li>
+                        <li>Interaction with a malicious site.</li>
+                        <li>Attacker installs it themselves after taking control through another method.</li>
+                    </ul>
+                    Reference: <a href="https://www.kaspersky.com/resource-center/definitions/drive-by-download">kapersky.com</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="center">
+                <div>5. Password-based attacks</div>
+                <br>
+                <br>
+                <img src="images/password.jpg" alt="Password cracking image.">
+                <br>
+                <br>
+                <div>Source: <a href="https://medium.com/@rafinrahmanchy/demystifying-password-cracking-attacks-and-defence-strategies-1304bda73249">medium.com</a></div>
+            </td>
+            <td>
+                <div>
+                    Password based attacks involve the attacker gaining access to a system or site by guessing or accessing a password.
+                    Password based attacks might include:
+                </div>
+                <ul>
+                    <li>Brute force: Attacker repeatedly guesses a password by trying every possible combination. 
+                        This is effective where passwords are short or non-complex. 
+                        Tools such as Jack-the-Ripper and Hashcat can automate the process.</li>
+                    <li>Dictionary attack: Attacker attempts passwords by using dictionary compiled strings. 
+                        The dictionary will contain common or previously breeched passwords.</li>
+                    <li>Phishing attack: Attacker convinces victim to divulge their credentials into a fraudulent website. </li>
+                    <li>Keylogger Attack: A keylogger is a software or hardware device used to track the key strokes on the victim's computer.
+                        The attacker will need to convince the victim to install the software with a phishing email, or physically install a device themselves.
+                    </li>
+                </ul>
+                Source: <a href="https://sechard.com/blog/most-common-types-of-password-attacks-and-how-to-prevent-them/">sechard.com</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="center">
+                <div>6. Fuzzing</div>
+                <br>
+                <br>
+                <img src="images/fuzzy.jpg" alt="Image of fuzzy caterpillar to demonstrate fuzzing.">
+                <br>
+                <br>
+                <div>Source: <a href="https://pages.cs.wisc.edu/~bart/fuzz/">wisc.edu</a></div>
+            </td>
+            <td>
+                <div>Fuzzing is a method of finding vulnerabilities in software by injecting malformed data in an automated way.
+                    eg. If the user is expected to to pick a small number, what happens when we inject 255 or a really high number?
+                    There may be an buffer overflow vulnerability. Or the software may crash.
+                    A fuzzer might try attacks on:
+                </div>
+                <ul>
+                    <li>Numbers: zero, negative or big numbers.</li>
+                    <li>Chars: urls, command-line inputs, escaped and inerpretable characters.</li>
+                    <li>Binary: pure binary sequences.</li>
+                </ul>
+                <div>Sources: <a href="https://owasp.org/www-community/Fuzzing">owasp.org</a> and <a href="https://pages.cs.wisc.edu/~bart/fuzz/">pages.cs.wisc.edu</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="center">
+                <div>7. Using components with known vulnerabilities</div>
+                <br>
+                <br>
+                <img src="images/known.jpg" alt="Attacker discovers version of componenet with known vulnerability.">
+                <br>
+                <br>
+                <div>Source: <a href="https://fazalurrahman2005.medium.com/9-using-components-with-known-vulnerability-security-basics-a1165ba5758f">medium.com</a></div>
+            </td>
+            <td>
+                <div>A known vulnerability will have been previously discovered and documented.
+                    An attacker has access to lists of known vulnerabilities. 
+                    Developers should only use the minimum necessary components, and should ensure that they are free from known vulnerabilities.
+                    Furthermore the developer should ensure input validation and output encoding to minimise the chance of attacks (minimise SLQ injection and XSS attacks).
+                    eg. A developer continues to run a system on a very old version of Microsoft Windows, without taking steps to isolate the sytem from any outside networks.
+                </div>
+                <div>Sources: <a href="https://owasp.org/www-project-top-ten/2017/A9_2017-Using_Components_with_Known_Vulnerabilities">owasp.org</a> and <a href="https://medium.com/@aakashyap_42928/using-components-with-known-vulnerabilities-cde7a4ec3e62">medium.com</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="center">
+                <div>8. DDoS (Distributed Denial-of-Service)</div>
+                <br>
+                <br>
+                <img src="images/ddos.jpg" alt="Traffic entering a congested road.">
+                <br>
+                <br>
+                <div>Source: <a href="https://www.cloudflare.com/en-gb/learning/ddos/what-is-a-ddos-attack/">cloudflare.com</a></div>
+            </td>
+            <td>
+                <div>An attacker disrupts the normal flow of network traffic by flooding the target with requests. 
+                    This is often done by directing a large network of compromised computers (botnet) to contact the target at the same time.
+                There are many possible types:
+                </div>
+                <ul>
+                    <li>Application layer attack: A HTTP request requires little work, but the target may need to reposnd to database queries and load files.</li>
+                    <li>HTTP floods the target with HTTP requests, resulting in a denial-of-service.</li>
+                    <li>Protocol attack: Overwhelms network protocol resources and targets network equipment like firewalls and load-balancers. 
+                        eg. The attacker spoofs SYN packets and sends a large number of initial connection requests, whithout finishing the handshake process.</li>
+                    <li>Volumetric attacks: The attacker overwhelms the target by sending them large amounts of data. 
+                        eg. DNS amplification involves sending a DNS server a request with a spoofed IP. The DNS server then sends the victing a response.</li>
+                    <li></li>
+                </ul>
+                <div>The vulnerability can be reduced through limiting the number of server requests, using a firewall, rerouting all traffic to anull route, or spreading the traffic widely. </div>
+                <div>Source: <a href="https://www.cloudflare.com/en-gb/learning/ddos/what-is-a-ddos-attack/">cloudflare.com</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="center">
+                <div>9. MiTM (Man-in-the-Middle)</div>
+                <br>
+                <br>
+                <img src="images/mitma.JPG" alt="Attacker sits between User and Web Server">
+                <br>
+                <br>
+                <div>Source: <a href="https://www.imperva.com/learn/application-security/man-in-the-middle-attack-mitm/" >imperva.com</a></div>
+            </td>
+            <td>
+                <div>The attacker positions themselves between the victim and the intended server. They are able to eavesdrop, impersonate, or change data passing between the two.
+                    The attacker can position themselves in this way by gaining access to the network, eg. through a public wifi. They may then perform:
+                </div>
+                <ul>
+                    <li>IP spoofing: Altering a header to send the user to an attacker's website.</li>
+                    <li>ARP spoofing: Spoofing the user's MAC address in order to get the data sent to them rather than to the victim.</li>
+                    <li>DNS spoofing: Or DNS cache poisoning, involving altering the DNS record of a legitimate site, to send the user to an attacker's site.</li>
+                </ul>
+                <div>Data is almost always sent encrypted, and so the attacker must find a way to decrypt the information:</div>
+                <ul>
+                    <li>HTTPS spoofing: Sends a fake certificate to the user, allowing the attacker to capture the data before passing it on.</li>
+                    <li>SSL BEAST: (Browser Exploit against SSL/TLS) The attacker infects the victim with malicious JavaScript code that can intercept web application cookies.</li>
+                    <li>SSL hijacking: Attacker sends fake authentication keys to the user and the application, so both believe that the session is secure.</li>
+                    <li>SSL stripping: The attacker intercepts the site authentication, but then downgrades the user's site to an unencrypted unsecure session. 
+                        The user is then passing on unencrypted information to the attacker.</li>
+                </ul>
+                <div>Source: <a href="https://www.imperva.com/learn/application-security/man-in-the-middle-attack-mitm/">imperva.com</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="center">
+                <div>10. Directory Traversal</div>
+                <br>
+                <br>
+                <img src="images/path.jpg" alt="Example of strokes and keys used for path transversal">
+                <br>
+                <br>
+                <div>Source: <a href="https://owasp.org/www-community/attacks/Path_Traversal">owasp.org</a></div>
+            </td>
+            <td>
+                <div>A user's browser accessing a web server can request files. 
+                    By manipulating the request path, the attacker may be able to access files that are not intented to be made public. 
+                    eg. by including slashes and dots (%2e%2e%2f represents ../) and guessing file names, or using known file names. 
+                    The particular testing required depends on the system being used. Different operating systems will use different file directories and different ways to navigate through those files.
+                    A good explanation is found <a href="https://github.com/OWASP/wstg/blob/master/document/4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include.md">here</a>.
+                </div>
+                <div>Source and great examples: <a href="https://owasp.org/www-community/attacks/Path_Traversal">owasp.org</a></div>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <div>For a fairly comprehensive read on web application security testing go <a href="https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing">here</a>.</div>
+
+    <h1>Task 4: javascript with button</h1>
+    <div>
+        <div>
+            <button id="catButton" class="notSelected" onclick="animalSelected(this.innerHTML)">Cat</button>
+            <button id="dogButton" class="notSelected" onclick="animalSelected(this.innerHTML)">Dog</button>
+            <button id="frogButton" class="notSelected" onclick="animalSelected(this.innerHTML)">Frog</button>
+        </div>
+        <br>
+        <div>
+        <input type="text" id="userActionedTextField" value="The user should click a button."/>
+    </div>
+        <br>
+        <div id="userActionedDivField">The user has not clicked a button yet.</div>
+        <br>
+        <div>
+            <img id="userActionedImage" src="images/cat.jpg" alt="Image of cat." class="generalImage" >
+        </div>
+        <br>
+        <div>
+            <a href="https://en.wikipedia.org/wiki/Cat#/media/File:Felis_catus-cat_on_snow.jpg">Cat image source: wikipedia</a>
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Dog#/media/File:Dog_-_%E0%B4%A8%E0%B4%BE%E0%B4%AF-6.JPG">Dog image source: wikipedia</a>
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Frog#/media/File:Variegated_golden_frog_(Mantella_baroni)_Ranomafana.jpg">Frog image source: wikipedia</a>
+        </div>
+    </div>
+
+    <script>
+        function animalSelected(animal) {
+        let textField = document.getElementById('userActionedTextField');
+        let unchangingText = "User clicks ";
+        textField.value = unchangingText + animal
+    
+        let divField = document.getElementById('userActionedDivField');
+        let unchangingDiv = " is clicked"
+        divField.innerHTML = animal + unchangingDiv;
+    
+        let image = document.getElementById('userActionedImage');
+    
+    
+        let catButton = document.getElementById('catButton');
+        let dogButton = document.getElementById('dogButton');
+        let frogButton = document.getElementById('frogButton');
+    
+        catButton.classList.remove("selected");
+        dogButton.classList.remove("selected");
+        frogButton.classList.remove("selected");
+        
+        switch(animal) {
+            case 'Cat':
+                image.src = "images/cat.jpg";
+                catButton.classList.add("selected");
+                break;
+            case 'Dog':
+                image.src = "images/dog.jpg";
+                dogButton.classList.add("selected");
+                break;
+            case 'Frog':
+                image.src = "images/frog.jpg";
+                frogButton.classList.add("selected");
+                break;
+        }
+    }
+    </script>
+
+</body>
+</Html>
